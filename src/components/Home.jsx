@@ -31,9 +31,15 @@ const Home = (props) => {
                                 to="/binary-to-decimal">
                                 Decimal
                             </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/binary-to-octal">
+                                Octal
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/binary-to-hexadecimal">
+                                Hexadecimal
+                            </Link>
                            
-                            <ListGroupItem action>Octal</ListGroupItem>
-                            <ListGroupItem action>Hexadecimal</ListGroupItem>
                         </ListGroup>
 
                     </Card>
@@ -46,11 +52,18 @@ const Home = (props) => {
                     </CardHeader>
                         
                         <ListGroup flush>
-                        <ListGroupItem action>Binary</ListGroupItem>
-                        <ListGroupItem action>Octal</ListGroupItem>
-                        <ListGroupItem action>
-                            Hexadecimal
-                        </ListGroupItem>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/decimal-to-binary">
+                                Binary
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/decimal-to-octal">
+                                Octal
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/decimal-to-hexadecimal">
+                                Hexadecimal
+                            </Link>
                         </ListGroup>
 
                     </Card>
@@ -63,9 +76,18 @@ const Home = (props) => {
                     </CardHeader>
                         
                         <ListGroup flush>
-                        <ListGroupItem action>Binary</ListGroupItem>
-                        <ListGroupItem action>Decimal</ListGroupItem>
-                        <ListGroupItem action>Hexadecimal</ListGroupItem>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/octal-to-binary">
+                                Binary
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/octal-to-decimal">
+                                Decimal
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/octal-to-hexadecimal">
+                                Hexadecimal
+                            </Link>
                         </ListGroup>
 
                     </Card>
@@ -78,9 +100,18 @@ const Home = (props) => {
                     </CardHeader>
                         
                         <ListGroup flush>
-                        <ListGroupItem action>Binary</ListGroupItem>
-                        <ListGroupItem action>Decimal</ListGroupItem>
-                        <ListGroupItem action>Octal</ListGroupItem>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/hexadecimal-to-binary">
+                                Binary
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/hexadecimal-to-octal">
+                                Octal
+                            </Link>
+                            <Link className="list-group-item-action list-group-item"
+                                to="/hexadecimal-to-decimal">
+                                Decimal
+                            </Link>
                         </ListGroup>
 
                     </Card>

@@ -28,7 +28,7 @@ const decimalTo = (decimal, base) => {
         decimal = 0xFFFFFFFF + decimal + 1;
     }
 
-    return decimal.toString(base).toUpperCase();
+    return anyToDecimal(decimal, 10).toString(base).toUpperCase();
 }
 
 const octalTo = (octal, base) => {

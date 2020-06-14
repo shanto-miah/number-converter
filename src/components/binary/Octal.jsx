@@ -6,18 +6,20 @@ import { binaryTo  } from '../../functions/Numberconverter';
 import { Link } from 'react-router-dom';
 
 
-const Decimal = ({match}) => {
+const Octal = ({match}) => {
 
     let [binary, setBinary] = useState(match.params.num ? match.params.num : '');
-    let [decimal, setDecimal] = useState(binaryTo(binary, 10));
+    let [Octal, setOctal] = useState(binaryTo(binary, 8));
+
+
 
     const onChangeHandler = (e) => {
         let val = e.target.value;
 
         setBinary(val);
 
-        let decimal = binaryTo(val, 10);
-        setDecimal(decimal);
+        let Octal = binaryTo(val, 8);
+        setOctal(Octal);
     }
 
     return (
@@ -25,7 +27,7 @@ const Decimal = ({match}) => {
           <Col sm={{size: 6, order: 'last'}} md="5" lg="4">
 
             <Card>
-                <CardHeader>Binary To Decimal</CardHeader>
+                <CardHeader>Binary To Octal</CardHeader>
                 <CardBody>
 
                     <Form onSubmit={(e) => e.preventDefault() }>
@@ -36,15 +38,15 @@ const Decimal = ({match}) => {
                         </FormGroup>
 
                         <FormGroup className="text-center">
-                            <Link className="card-link" to={`/decimal-to-binary/${decimal}`}>
+                            <Link className="card-link" to={`/octal-to-binary/${Octal}`}>
                                 <img src={Switch} className="my-2" height="25" alt="switch" style={{ transform: 'rotate(90deg)' }}/>
                             </Link>
                         </FormGroup>
 
                         <FormGroup>
-                            <Label>Decimal</Label>
+                            <Label>Octal</Label>
                             <Alert color="primary" style={{ overflowX: 'auto' }}>
-                                { decimal ? decimal : 'N/A' }
+                                { Octal ? Octal : 'N/A' }
                             </Alert>
                         </FormGroup>
 
@@ -61,4 +63,4 @@ const Decimal = ({match}) => {
     );
 }
 
-export default Decimal;
+export default Octal;

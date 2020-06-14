@@ -6,18 +6,19 @@ import { binaryTo  } from '../../functions/Numberconverter';
 import { Link } from 'react-router-dom';
 
 
-const Decimal = ({match}) => {
+const Hexa = ({match}) => {
 
     let [binary, setBinary] = useState(match.params.num ? match.params.num : '');
-    let [decimal, setDecimal] = useState(binaryTo(binary, 10));
+    let [Hexa, setHexa] = useState(binaryTo(binary, 16));
+
 
     const onChangeHandler = (e) => {
         let val = e.target.value;
 
         setBinary(val);
 
-        let decimal = binaryTo(val, 10);
-        setDecimal(decimal);
+        let Hexa = binaryTo(val, 16);
+        setHexa(Hexa);
     }
 
     return (
@@ -25,7 +26,7 @@ const Decimal = ({match}) => {
           <Col sm={{size: 6, order: 'last'}} md="5" lg="4">
 
             <Card>
-                <CardHeader>Binary To Decimal</CardHeader>
+                <CardHeader>Binary To Hexadecimal</CardHeader>
                 <CardBody>
 
                     <Form onSubmit={(e) => e.preventDefault() }>
@@ -36,15 +37,15 @@ const Decimal = ({match}) => {
                         </FormGroup>
 
                         <FormGroup className="text-center">
-                            <Link className="card-link" to={`/decimal-to-binary/${decimal}`}>
+                            <Link className="card-link" to={`/hexadecimal-to-binary/${Hexa}`}>
                                 <img src={Switch} className="my-2" height="25" alt="switch" style={{ transform: 'rotate(90deg)' }}/>
                             </Link>
                         </FormGroup>
 
                         <FormGroup>
-                            <Label>Decimal</Label>
+                            <Label>Hexadecimal</Label>
                             <Alert color="primary" style={{ overflowX: 'auto' }}>
-                                { decimal ? decimal : 'N/A' }
+                                { Hexa ? Hexa : 'N/A' }
                             </Alert>
                         </FormGroup>
 
@@ -57,8 +58,8 @@ const Decimal = ({match}) => {
           <Col sm md lg>
               <h3 className="text-truncate">Instuction</h3>
           </Col>
-      </Row>  
+      </Row>
     );
 }
 
-export default Decimal;
+export default Hexa;
