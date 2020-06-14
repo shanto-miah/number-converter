@@ -33,7 +33,7 @@ const Decimal = () => {
 
                     <FormGroup>
                         <Label for="binary">Binary</Label>
-                        <input className="form-control" onChange={onChangeHandler} type="number" pattern="[0-1]+" title="Okksdfvas" placeholder="Enter a binary number..."/>
+                        <input className="form-control" onChange={onChangeHandler} type="number" pattern="[0-1]" title="Okksdfvas" placeholder="Enter a binary number..."/>
                     </FormGroup>
 
                     <FormGroup className="text-center">
