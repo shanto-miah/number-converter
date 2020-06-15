@@ -1,68 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Row, Col, Form, FormGroup, Label, Input, Alert, Card, CardBody, CardHeader } from 'reactstrap';
-import Switch from '../../svgs/switch.svg';
-import { octalTo  } from '../../functions/Numberconverter';
-
-import { Link } from 'react-router-dom';
+import { Row, Col } from 'reactstrap';
 
 
-const Hexa = ({match}) => {
+import Card from '../partials/Card';
 
 
-    let [Octal, setOctal] = useState(match.params.num ? match.params.num : '');
-    let [Hexa, setHexa] = useState(octalTo(Octal, 16));
+const Binary = ({match}) => {
+    let value = match.params.num ? match.params.num : '';
 
-
-    const onChangeHandler = (e) => {
-        let val = e.target.value;
-
-        setOctal(val);
-
-        let Hexa = octalTo(val, 16);
-        
-        setHexa(Hexa);
-    }
 
     return (
       <Row>
-          <Col sm={{size: 6, order: 'last'}} md="5" lg="4">
-
-            <Card>
-                <CardHeader>Octal To Hexa</CardHeader>
-                <CardBody>
-
-                    <Form onSubmit={(e) => e.preventDefault() }>
-
-                        <FormGroup>
-                            <Label for="Hexa">Octal</Label>
-                            <Input type="number" value={Octal} onChange={onChangeHandler}/>
-                        </FormGroup>
-
-                        <FormGroup className="text-center">
-                            <Link className="card-link" to={`/Hexa-to-Octal/${Hexa}`}>
-                                <img src={Switch} className="my-2" height="25" alt="switch" style={{ transform: 'rotate(90deg)' }}/>
-                            </Link>
-                        </FormGroup>
-
-                        <FormGroup>
-                            <Label>Hexa</Label>
-                            <Alert color="primary" style={{ overflowX: 'auto' }}>
-                                { Hexa ? Hexa : 'N/A' }
-                            </Alert>
-                        </FormGroup>
-
-                    </Form>
-                </CardBody>
-            </Card>
-
-          </Col>
+          <Card className="sticky-top" from="8" to="16" input={value} />
 
           <Col sm md lg>
               <h3 className="text-truncate">Instuction</h3>
           </Col>
-      </Row>  
+      </Row>
     );
 }
 
-export default Hexa;
+export default Binary;

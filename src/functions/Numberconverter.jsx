@@ -78,6 +78,16 @@ const isHexadecimal = (hexadecimal) => {
     return reg.test(hexadecimal);
 }
 
+const baseToName = (num, c = 0) => {
+
+    num = parseInt(num);
+    c = parseInt(c);
+
+    let val = (num === 2) ? 'Binary' : (num === 8) ? 'Octal' : (num === 10) ? 'Decimal' : 'Hexadecimal';
+    
+    return( (c === 0) ? val : (c === 1) ? val.toUpperCase() : val.toLowerCase() );
+}
+
 export {
     isBinary,
     isDecimal,
@@ -86,5 +96,6 @@ export {
     binaryTo,
     decimalTo,
     octalTo,
-    hexadecimalTo
+    hexadecimalTo,
+    baseToName
 }

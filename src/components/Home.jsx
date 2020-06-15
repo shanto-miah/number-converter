@@ -7,8 +7,7 @@ import {
     Col,
     Card,
     CardHeader,
-    ListGroup,
-    ListGroupItem
+    ListGroup
 } from 'reactstrap';
 
 const Home = (props) => {
