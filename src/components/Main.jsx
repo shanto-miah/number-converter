@@ -10,7 +10,7 @@ class Main extends Component {
         return (
             <React.Fragment>
                 <Navmenu/>
-                <Route/>
+                {/* <Route/> */}
             </React.Fragment>
         );
     }
