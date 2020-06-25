@@ -5,4 +5,4 @@ This is a simple number converter application which allow you to convert Binary,
 
 ### Live At
 
-[http://localhost:3000](http://localhost:3000)
+[https://keen-swirles-6c3220.netlify.app](https://keen-swirles-6c3220.netlify.app)
